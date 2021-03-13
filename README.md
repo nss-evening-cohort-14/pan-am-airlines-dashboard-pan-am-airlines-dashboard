@@ -81,7 +81,7 @@ Welcome to PanAm Express!  With some new funding, PanAm has been revived after d
 
 ## Relevant Links
 Check out the deployed site: (netlify link here)
-ERD | Wireframe: https://app.lucidchart.com/lucidchart/1c0422ce-15f5-4db9-a721-d476adfb5c9f/edit?page=ie0j6CRr5KUP#
+ERD | Wireframe: https://app.lucidchart.com/lucidchart/1c0422ce-15f5-4db9-a721-d476adfb5c9f/edit?page=E31jtNLMRjno#
 Project Board: https://github.com/nss-evening-cohort-14/pan-am-group-project/projects
 
 ## CONTRIBUTORS: 
