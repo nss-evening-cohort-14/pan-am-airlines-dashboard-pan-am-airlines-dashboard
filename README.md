@@ -3,7 +3,7 @@
 ### Product Owner
 Your PO is assigned as an approver and feedback for your application. They are not there to guide you through code. If you have code related needs, submit a completed issue ticket.
 
-PO: **Dr. T**
+PO: **Miss Trinity**
 
 ### Description
 Welcome to PanAm Express!  With some new funding, PanAm has been revived after dissolving in 1991, and unfortunately, their website didn't age well.  Fortunately for you, PanAm is hiring you to fix their website.  In order to get their business back off the ground (pun intended), they have requested you build them a dashboard to keep track of the crew, the planes, the airports, and the food provided during flights.  They need to be able to log in to make these changes, as they don't want just anyone from outside the organization to make changes.  They also have requested that their site be fully branded, since nobody in the internet age knows about PanAm.
