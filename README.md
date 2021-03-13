@@ -3,7 +3,10 @@
 ### Product Owner
 Your PO is assigned as an approver and feedback for your application. They are not there to guide you through code. If you have code related needs, submit a completed issue ticket.
 
-PO: **Dr. T**
+PO: ** Miss Trinity **
+
+## Pan-Am Express! [![Netlify Status](Netlify Badge HERE)
+
 
 ### Description
 Welcome to PanAm Express!  With some new funding, PanAm has been revived after dissolving in 1991, and unfortunately, their website didn't age well.  Fortunately for you, PanAm is hiring you to fix their website.  In order to get their business back off the ground (pun intended), they have requested you build them a dashboard to keep track of the crew, the planes, the airports, and the food provided during flights.  They need to be able to log in to make these changes, as they don't want just anyone from outside the organization to make changes.  They also have requested that their site be fully branded, since nobody in the internet age knows about PanAm.
@@ -64,3 +67,25 @@ Welcome to PanAm Express!  With some new funding, PanAm has been revived after d
 - As a user, I should be able to add a bag.
 - As a user, I should be able to edit a bag.
 - As a user, I should be able to delete a bag.
+
+## Functionality Includes:
+
+## Technologies Used: 
+
+## Loom Video of Pan-Am Express!
+(Loom link HERE)
+
+
+## Project Screenshots
+
+
+## Relevant Links
+Check out the deployed site: (netlify link here)
+ERD | Wireframe: https://app.lucidchart.com/lucidchart/1c0422ce-15f5-4db9-a721-d476adfb5c9f/edit?page=ie0j6CRr5KUP#
+Project Board: https://github.com/nss-evening-cohort-14/pan-am-group-project/projects
+
+## CONTRIBUTORS: 
+Ben Jarrett : https://github.com/BenJarrett
+Sara Schoonover : https://github.com/SaraSchoonover
+Nathan Keith : https://github.com/nashvegasnate
+Dani Crosby : https://github.com/danicrosby
