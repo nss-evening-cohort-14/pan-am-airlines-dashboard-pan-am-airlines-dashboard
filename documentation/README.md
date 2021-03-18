@@ -72,7 +72,6 @@ import axios from 'axios';
 const examplePromise = () => {
   axios.get('http://localhost:3001/example')
     .then((data) => {
-      console.warn(data);
     })
     .catch((error) => {
       console.error(error);
