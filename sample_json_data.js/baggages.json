@@ -1,0 +1,32 @@
+{
+  "-MVsZoVjkinEU-pIhHc9" : {
+    "baggageImage" : "https://images.unsplash.com/photo-1595475349262-88ba1e1eecaf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bHVnZ2FnZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "baggageNumber" : 1,
+    "baggageWeight" : 58,
+    "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
+  },
+  "-MVsZoVkjEC2O4333RmC" : {
+    "baggageImage" : "https://images.unsplash.com/photo-1553531768-88af16561c0f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bHVnZ2FnZXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "baggageNumber" : 2,
+    "baggageWeight" : 76,
+    "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
+  },
+  "-MVsZoVlVJmxs0OAz1lP" : {
+    "baggageImage" : "https://images.unsplash.com/photo-1587533421909-c695540fbaac?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8c3VpdGNhc2V8ZW58MHwyfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "baggageNumber" : 3,
+    "baggageWeight" : 19,
+    "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
+  },
+  "-MVsZoVnZ7zztwQIfLbB" : {
+    "baggageImage" : "https://images.unsplash.com/photo-1515622472995-1a06094d2224?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "baggageNumber" : 4,
+    "baggageWeight" : 62,
+    "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
+  },
+  "-MVsZoVp0pBmcAB6SmjP" : {
+    "baggageImage" : "https://images.unsplash.com/photo-1567755997194-f92b5dc9106f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8c3VpdGNhc2V8ZW58MHwyfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "baggageNumber" : 5,
+    "baggageWeight" : 30,
+    "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
+  }
+}

@@ -8,8 +8,8 @@ const getCrews = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/crews.json`)
     .then((response) => {
       if (response.data) {
-        const authorArray = Object.values(response.data);
-        resolve(authorArray);
+        const crewArray = Object.values(response.data);
+        resolve(crewArray);
       } else {
         resolve([]);
       }
@@ -24,5 +24,4 @@ const getSingleCrew = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 export { getCrews, getSingleCrew };
-
 // ?orderBy="uid"&equalTo="${uid}"
