@@ -7,5 +7,4 @@ const domBuilder = () => {
     <div id="main-container"></div> 
   `;
 };
-
 export default domBuilder;
