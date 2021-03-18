@@ -1,0 +1,13 @@
+import { showAirports } from '../components/airports';
+import getAirports from '../helpers/data/airportData';
+
+const navEvents = (uid) => {
+  document.querySelector('#airport').addEventListener('click', () => {
+    document.querySelector('#modal').innerHTML = '';
+    document.querySelector('#main-container').innerHTML = '';
+    document.querySelector('#form-container').innerHTML = '';
+    getAirports(uid).then((airportsArray) => showAirports(airportsArray));
+  });
+};
+
+export default navEvents;
