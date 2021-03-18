@@ -6,10 +6,10 @@ const showFood = (array) => {
     document.querySelector('#main-container').innerHTML += `<div class="card">
     <img src='${item.foodImage}' class="card-img-top" alt="...">
     <div class="card-body">
-    <h5 id="airport-name-title--${item.firebaseKey}" class="card-title">${item.foodName}</h5>
+    <h5 id="food-name-title--${item.firebaseKey}" class="card-title">${item.foodName}</h5>
       <p class="card-desc">${item.foodPrice}</p>
-      <a href="#" class="btn btn-danger" id="viewFood--${item.firebaseKey}">See Food</a>
-      <a href="#" class="btn btn-danger" id="deleteFood--${item.firebaseKey}">Delete Food</a>
+      <a href="#" class="btn btn-danger" id="viewFood--${item.firebaseKey}">View Entree</a>
+      <a href="#" class="btn btn-danger" id="deleteFood--${item.firebaseKey}">Delete Entree</a>
     </div>
   </div>`;
   });
