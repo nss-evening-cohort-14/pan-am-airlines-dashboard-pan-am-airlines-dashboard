@@ -1,4 +1,3 @@
-
 // const domEvents = (uid) => {
 //   document.querySelector('body').addEventListener('click', (e) => {
 //     if (e.target.id.includes('viewAirport')) {

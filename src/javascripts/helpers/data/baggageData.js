@@ -1,19 +1,13 @@
 import axios from 'axios';
-import firebaseConfig from './apiKeys';
+import firebaseConfig from '../apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET BAGGAGE CARDS
 const getBaggage = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/baggages.json`)
-    .then((response) => {
-      if (response.data) {
-        const baggageArray = Object.values(response.data);
-        resolve(baggageArray);
-      } else {
-        resolve([]);
-      }
-    }).catch((error) => reject(error));
+    .then((response) => resolve(Object.values(response.data)))
+    .catch((error) => reject(error));
 });
 
 // GET SINGLE BAG
