@@ -5,12 +5,12 @@ import { showFood } from '../components/food';
 // import loginButton from '../components/loginButton';
 // import logoutButton from '../components/logoutButton';
 
-const startApp = () => {
+const startApp = (userObject) => {
   domBuilder();
   navBar();
   // loginButton();
   // logoutButton();
-  getFood().then((foodServices) => showFood(foodServices));
+  getFood(userObject).then((foodServices) => showFood(foodServices));
 };
 
 export default startApp;
