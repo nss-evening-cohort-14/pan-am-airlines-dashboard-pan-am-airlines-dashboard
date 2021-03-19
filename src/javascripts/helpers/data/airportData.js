@@ -1,13 +1,13 @@
 import 'firebase/auth';
 import axios from 'axios';
-import firebaseConfig from '../apiKeys';
+import firebaseConfig from './auth/apiKeys';
 
 // API CAll
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET AIRPORTS
-const getAirports = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/airports.json?orderBy="uid"&equalTo="${uid}"`)
+const getAirports = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/airports.json`)
     .then((response) => {
       if (response.data) {
         const airportArray = Object.values(response.data);

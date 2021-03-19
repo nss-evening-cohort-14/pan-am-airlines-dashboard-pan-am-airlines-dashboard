@@ -43,9 +43,7 @@ const navBar = () => {
           <div id="logout-button"></div>
         </div>
       </nav>
-      <div class="col" id="footer">
-      </div>
-    `;
+      <div class="col" id="footer">`;
 };
 
 export default navBar;

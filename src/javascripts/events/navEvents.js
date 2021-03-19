@@ -1,30 +1,29 @@
-import showPlanes from '../components/planes';
-import { showCrews } from '../components/crew';
-import { showBaggage } from '../components/forms/baggage';
-import { showAirports } from '../components/airports';
-// import getFoodService from '../components/foodServices'
-import getPlanes from '../helpers/data/planeData';
-import getAirports from '../helpers/data/airportData';
-import getCrews from '../helpers/data/crewData';
-import getBaggage from '../helpers/data/baggageData';
 // import showFoodService from '../components/foodService';
+import { showAirports } from '../components/airports';
+import { showBaggage } from '../components/baggage';
+import { showCrews } from '../components/crew';
+import showPlanes from '../components/planes';
+import getAirports from '../helpers/data/airportData';
+import { getBaggage } from '../helpers/data/baggageData';
+import { getCrews } from '../helpers/data/crewData';
+import getPlanes from '../helpers/data/planeData';
 
 // NAV EVENTS
-const navEvents = (uid) => {
+const navEvents = () => {
   document.querySelector('#planes').addEventListener('click', () => {
-    getPlanes(uid).then((planesArray) => showPlanes(planesArray));
+    getPlanes().then((planesArray) => showPlanes(planesArray));
   });
 
   document.querySelector('#airport').addEventListener('click', () => {
-    getAirports(uid).then((airportsArray) => showAirports(airportsArray));
+    getAirports().then((airportsArray) => showAirports(airportsArray));
   });
 
   document.querySelector('#crew').addEventListener('click', () => {
-    getCrews(uid).then((crewsArray) => showCrews(crewsArray));
+    getCrews().then((crewsArray) => showCrews(crewsArray));
   });
 
   document.querySelector('#baggage').addEventListener('click', () => {
-    getBaggage(uid).then((baggagesArray) => showBaggage(baggagesArray));
+    getBaggage().then((baggagesArray) => showBaggage(baggagesArray));
   });
 
   // document.querySelector('#foodService').addEventListener('click', () => {
