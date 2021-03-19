@@ -1,15 +1,10 @@
-// USE WITH FIREBASE AUTH
-// import checkLoginStatus from './helpers/auth';
-import 'bootstrap'; // import bootstrap elements and js
+import 'bootstrap';
 
 import '../styles/main.scss';
+import checkLoginStatus from './helpers/data/auth/auth';
 
 const init = () => {
-  document.querySelector('#app').innerHTML = '<h1>Welcome To Pan-Am!</h1>';
-  console.warn('YOU ARE UP AND RUNNING!');
-
-  // USE WITH FIREBASE AUTH
-  // checkLoginStatus();
+  checkLoginStatus();
 };
 
 init();

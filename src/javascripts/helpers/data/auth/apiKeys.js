@@ -7,5 +7,4 @@ const firebaseConfig = {
   appId: process.env.APP_APP_ID,
   measurementId: process.env.APP_MEASUREMENT_ID,
 };
-
 export default firebaseConfig;
