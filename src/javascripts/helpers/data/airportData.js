@@ -1,4 +1,3 @@
-import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 

@@ -1,12 +1,13 @@
-// import showFoodService from '../components/foodService';
 import { showAirports } from '../components/airports';
 import { showBaggage } from '../components/baggage';
 import { showCrews } from '../components/crew';
+import { showFood } from '../components/food';
 import showPlanes from '../components/planes';
 import getAirports from '../helpers/data/airportData';
 import { getBaggage } from '../helpers/data/baggageData';
 import { getCrews } from '../helpers/data/crewData';
 import getPlanes from '../helpers/data/planeData';
+import getFood from '../helpers/data/foodData';
 
 // NAV EVENTS
 const navEvents = () => {
@@ -26,9 +27,9 @@ const navEvents = () => {
     getBaggage().then((baggagesArray) => showBaggage(baggagesArray));
   });
 
-  // document.querySelector('#foodService').addEventListener('click', () => {
-  //   getFoodService(uid).then((foodServiceArray) => showFoodService(foodServiceArray));
-  // });
+  document.querySelector('#foodService').addEventListener('click', () => {
+    getFood().then((foodServiceArray) => showFood(foodServiceArray));
+  });
 };
 
 export default navEvents;
