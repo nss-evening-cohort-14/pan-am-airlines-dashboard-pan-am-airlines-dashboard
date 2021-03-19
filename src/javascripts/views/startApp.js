@@ -1,7 +1,10 @@
 import domBuilder from '../components/forms/domBuilder';
 import navBar from '../components/forms/navBar';
-import getFood from '../helpers/foodData';
-import { showFood } from '../components/food';
+import getPlanes from '../helpers/data/planeData';
+import showPlanes from '../components/planes';
+import addPlane from '../components/forms/addPlaneForm';
+// import getFood from '../helpers/foodData';
+// import { showFood } from '../components/food';
 // import loginButton from '../components/loginButton';
 // import logoutButton from '../components/logoutButton';
 // import domEvents from '../events/domEvents';
@@ -14,7 +17,9 @@ const startApp = (userObject) => {
   navBar();
   // loginButton();
   // logoutButton();
-  getFood(userObject).then((foodServices) => showFood(foodServices));
+  addPlane();
+  getPlanes(userObject).then((planesArray) => showPlanes(planesArray));
+  // getFood(userObject).then((foodServices) => showFood(foodServices));
   // navEvents(userObject.uid);
 
   // domEvents(userObject.uid);
