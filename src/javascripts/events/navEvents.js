@@ -4,10 +4,9 @@ import { showBaggage } from '../components/forms/baggage';
 import { showAirports } from '../components/airports';
 // import getFoodService from '../components/foodServices'
 import getPlanes from '../helpers/data/planeData';
-import getAirports from '../helpers/data/airportData';
-import getCrews from '../helpers/data/crewData';
-import getBaggage from '../helpers/data/baggageData';
-// import showFoodService from '../components/foodService';
+import { getAirports } from '../helpers/data/airportData';
+import { getCrews } from '../helpers/data/crewData';
+import { getBaggage } from '../helpers/data/baggageData';
 
 // NAV EVENTS
 const navEvents = (uid) => {
