@@ -1,6 +1,5 @@
 import axios from 'axios';
-import firebaseConfig from '../apiKeys';
-// API CALLS FOR BAGGAGE //
+import firebaseConfig from './auth/apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 

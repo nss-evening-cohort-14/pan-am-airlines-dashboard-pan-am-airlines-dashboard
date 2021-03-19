@@ -1,8 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import loginButton from '../components/loginButton';
-import logoutButton from '../components/logoutButton';
-import startApp from '../views/startApp';
+import loginButton from '../../../buttons/loginButton';
+import logoutButton from '../../../buttons/logoutButton';
+import startApp from '../../../views/startApp';
 import firebaseConfig from './apiKeys';
 
 const checkLoginStatus = () => {

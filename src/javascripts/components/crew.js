@@ -6,10 +6,11 @@ const showCrews = (array) => {
 
   array.forEach((item) => {
     document.querySelector('#main-container').innerHTML += `
-    <div class="card m-4" style="width: 18rem;">
-    <img class="card-img-top" src=${item.imageUrl} style="height: 200px;">
+    <div class="card m-4" style="width: 20em; background-color: rgb(66, 176, 250); border: none">
+    <img class="card-img-top" src=${item.imageUrl}" style="border-radius: 50%; border: 1em solid white">
       <div class="card-body">
-        <a href="#"><h5 id="crew-name-title--${item.firebaseKey}" class="card-title">${item.firstName} ${item.lastName}</h5></a>
+        <a href="#"><h2 id="crew-name-title--${item.firebaseKey}" class="card-title text-white">${item.firstName} ${item.lastName}</h2></a>
+        <h5 class="card-title">${item.crewTitle}</h5>
         <button class="btn btn-danger" id="view-crew-member--${item.firebaseKey}">View</button>
         <button class="btn btn-danger" id="delete-crew-member--${item.firebaseKey}">Delete</button>
       </div>
