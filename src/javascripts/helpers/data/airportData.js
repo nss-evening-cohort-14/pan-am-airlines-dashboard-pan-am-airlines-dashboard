@@ -1,3 +1,4 @@
+import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
@@ -16,18 +17,24 @@ const getAirports = () => new Promise((resolve, reject) => {
       }
     }).catch((error) => reject(error));
 });
-
+// DELETE AIRPORTS
+const deleteAirport = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/airports/${firebaseKey}.json`)
+    .then(() => getAirports().then((airportsArray) => resolve(airportsArray)))
+    .catch((error) => reject(error));
+});
 // CREATE AIRPORTS
 
-const createAirport = (airportObject, uid) => new Promise((resolve, reject) => {
+const createAirport = (airportObject) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/airports.json`, airportObject)
     .then((response) => {
       const body = { firebaseKey: response.data.name };
       axios.patch(`${dbUrl}/airports/${response.data.name}.json`, body)
         .then(() => {
-          getAirports(uid).then((airportsArray) => resolve(airportsArray));
+          getAirports().then((airportsArray) => resolve(airportsArray));
         });
     }).catch((error) => reject(error));
 });
+// DELETE AIRPORTS
 
-export { getAirports, createAirport };
+export { getAirports, createAirport, deleteAirport };
