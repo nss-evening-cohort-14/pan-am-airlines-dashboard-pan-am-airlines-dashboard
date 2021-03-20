@@ -6,7 +6,6 @@ const planeDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A PLANE
     if (e.target.id.includes('add-plane-btn')) {
-      console.warn('CLICKED ADD PLANE BTN', e.target.id);
       addPlaneForm();
     }
     // CLICK EVENT FOR TARGETING AND SUBMITING SUBMIT PLANE //
