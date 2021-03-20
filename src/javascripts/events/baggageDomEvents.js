@@ -8,7 +8,6 @@ const bagDomEvents = () => {
       addBaggageForm();
     }
 
-    // SUBMIT FORM
     if (e.target.id.includes('submit-baggage-btn')) {
       e.preventDefault();
       const pinObject = {
@@ -18,6 +17,7 @@ const bagDomEvents = () => {
       };
 
       createBaggage(pinObject).then((baggageArray) => showBaggage(baggageArray));
+      document.querySelector('#form-container').innerHTML = '';
     }
   });
 };
