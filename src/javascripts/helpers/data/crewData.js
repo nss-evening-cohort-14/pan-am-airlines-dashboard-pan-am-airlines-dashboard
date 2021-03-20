@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
@@ -29,4 +30,10 @@ const createCrew = (crewObject) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export { getCrews, getSingleCrew, createCrew };
+const deleteCrew = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/crews/${firebaseKey}.json`)
+    .then(() => getCrews().then((crewArray) => resolve(crewArray)))
+    .catch((error) => reject(error));
+});
+
+export { getCrews, getSingleCrew, createCrew, deleteCrew };
