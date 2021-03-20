@@ -1,9 +1,17 @@
+/* eslint-disable no-alert */
 import { showBaggage } from '../components/baggage';
 import addBaggageForm from '../components/forms/addBaggageForm';
-import { createBaggage } from '../helpers/data/baggageData';
+import { createBaggage, deleteBaggage } from '../helpers/data/baggageData';
 
 const baggageDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
+    if (e.target.id.includes('delete-baggage')) {
+      if (window.confirm('Are you sure you want to delete this bag?')) {
+        const firebaseKey = e.target.id.split('--')[1];
+        deleteBaggage(firebaseKey).then((baggageArray) => showBaggage(baggageArray));
+      }
+    }
+
     if (e.target.id.includes('add-baggage-btn')) {
       addBaggageForm();
     }
