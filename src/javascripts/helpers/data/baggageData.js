@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
@@ -29,4 +30,10 @@ const createBaggage = (baggageObject) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export { getBaggage, getSingleBag, createBaggage };
+const deleteBaggage = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/baggages/${firebaseKey}.json`)
+    .then(() => getBaggage().then((baggageArray) => resolve(baggageArray)))
+    .catch((error) => reject(error));
+});
+
+export { getBaggage, getSingleBag, createBaggage, deleteBaggage };

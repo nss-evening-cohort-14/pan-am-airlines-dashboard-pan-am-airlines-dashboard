@@ -16,6 +16,12 @@ const getPlanes = () => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
+// DELETE PLANE //
+const deletePlane = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/planes/${firebaseKey}.json`)
+    .then(() => getPlanes().then((planesArray) => resolve(planesArray)))
+    .catch((error) => reject(error));
+});
 // CREATE PLANES //
 const createPlane = (planeObject) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/planes.json`, planeObject)
@@ -28,4 +34,4 @@ const createPlane = (planeObject) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export { getPlanes, createPlane };
+export { getPlanes, createPlane, deletePlane };
