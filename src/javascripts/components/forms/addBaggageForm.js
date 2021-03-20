@@ -10,17 +10,17 @@ const addBaggageForm = () => {
       <form id="submit-baggage-form mx-auto" class="mb-4">
       <div class="form-group">
         <label for="baggageNumber">Baggage #</label>
-        <input type="text" class="form-control" id="baggageNumber" placeholder="Baggage Number" required>
+        <input type="text" class="form-control" id="baggageNumber" placeholder="*Baggage Number #0008975741" required>
       </div>
       <div class="form-group">
         <label for="baggageWeight">Baggage Weight</label>
-        <input type="text" class="form-control" id="baggageWeight" placeholder="Baggage Weight" required>
+        <input type="text" class="form-control" id="baggageWeight" placeholder="*Baggage Weight LBS" required>
       </div>
       <div class="form-group">
         <label for="baggageImage">Image URL</label>
-        <input type="url" class="form-control" id="baggageImage" placeholder="Baggage Image" required>
+        <input type="url" class="form-control" id="baggageImage" placeholder="*Baggage Image Required" required>
       </div>
-      <button type="submit" id="submit-baggage-btn" class="btn btn-primary">Submit Bag</button>
+      <button type="submit" id="submit-baggage-btn" class="btn btn-primary">Check-In Bag</button>
     </form>
     </div>
   </div>`;

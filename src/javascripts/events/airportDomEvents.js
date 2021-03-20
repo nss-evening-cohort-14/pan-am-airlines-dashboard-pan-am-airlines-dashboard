@@ -6,7 +6,6 @@ const airportDomEvents = (uid) => {
   document.querySelector('body').addEventListener('click', (e) => {
     // CLICK EVENT FOR SHOWING FORM FOR ADDING AN AIRPLANE
     if (e.target.id.includes('add-airport-btn')) {
-      console.warn('CLICKED ADD BOOK BUTTON', e.target.id);
       addAirportForm();
     }
 

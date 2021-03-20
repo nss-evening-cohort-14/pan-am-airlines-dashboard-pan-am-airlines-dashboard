@@ -6,7 +6,6 @@ const foodDomEvents = (uid) => {
   // CLICK EVENT FOR SHOWING FORM FOR ADDING FOOD
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('add-food-btn')) {
-      console.warn('CLICKED ADD FOOD BUTTON', e.target.id);
       addFoodForm();
     }
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING FOOD
