@@ -1,6 +1,6 @@
 const showPlanes = (arr) => {
   document.querySelector('#boards').innerHTML = '';
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-airport-btn">Add A Plane</button>';
+  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-plane-btn">Add A Plane</button>';
   document.querySelector('#main-container').innerHTML = '';
 
   arr.forEach((item) => {

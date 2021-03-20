@@ -2,6 +2,7 @@ const showFood = (array) => {
   document.querySelector('#boards').innerHTML = '';
   document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-food-btn">Add A Meal</button>';
   document.querySelector('#main-container').innerHTML = '';
+
   array.forEach((item) => {
     document.querySelector('#main-container').innerHTML += `<div class="card">
     <img src='${item.foodImage}' class="card-img-top" alt="...">
@@ -14,7 +15,5 @@ const showFood = (array) => {
   </div>`;
   });
 };
-const emptyFood = () => {
-  document.querySelector('#boards').innerHTML = '<h1>No Food Available</h1>';
-};
-export { showFood, emptyFood };
+
+export default showFood;
