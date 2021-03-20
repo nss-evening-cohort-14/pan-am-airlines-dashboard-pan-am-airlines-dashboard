@@ -17,4 +17,16 @@ const getSingleCrew = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getCrews, getSingleCrew };
+// CREATE CREW MEMBER
+const createCrew = (crewObject) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/crews.json`, crewObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/crews/${response.data.name}.json`, body)
+        .then(() => {
+          getCrews().then((crewArray) => resolve(crewArray));
+        });
+    }).catch((error) => reject(error));
+});
+
+export { getCrews, getSingleCrew, createCrew };
