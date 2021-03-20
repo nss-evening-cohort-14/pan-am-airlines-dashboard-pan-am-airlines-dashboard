@@ -14,7 +14,5 @@ const showFood = (array) => {
   </div>`;
   });
 };
-const emptyFood = () => {
-  document.querySelector('#boards').innerHTML = '<h1>No Food Available</h1>';
-};
-export { showFood, emptyFood };
+
+export default showFood;
