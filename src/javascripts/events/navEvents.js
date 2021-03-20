@@ -3,7 +3,7 @@ import { showBaggage } from '../components/baggage';
 import { showCrews } from '../components/crew';
 import { showFood } from '../components/food';
 import showPlanes from '../components/planes';
-import getAirports from '../helpers/data/airportData';
+import { getAirports } from '../helpers/data/airportData';
 import { getBaggage } from '../helpers/data/baggageData';
 import { getCrews } from '../helpers/data/crewData';
 import getPlanes from '../helpers/data/planeData';

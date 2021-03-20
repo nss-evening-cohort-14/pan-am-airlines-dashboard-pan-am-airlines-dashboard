@@ -17,4 +17,17 @@ const getAirports = () => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export default getAirports;
+// CREATE AIRPORTS
+
+const createAirport = (airportObject, uid) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/airports.json`, airportObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/airports/${response.data.name}.json`, body)
+        .then(() => {
+          getAirports(uid).then((airportsArray) => resolve(airportsArray));
+        });
+    }).catch((error) => reject(error));
+});
+
+export { getAirports, createAirport };
