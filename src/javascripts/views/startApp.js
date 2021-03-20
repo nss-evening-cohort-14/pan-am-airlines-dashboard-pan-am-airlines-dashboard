@@ -16,10 +16,9 @@ const startApp = (userObject) => {
   navEvents(userObject.uid);
   crewDomEvents(userObject.uid);
   baggageDomEvents(userObject.uid);
-  planeDomEvents(userObject.uid);
   airportDomEvents(userObject.uid);
   foodDomEvents(userObject.uid);
-
+  planeDomEvents(userObject);
   logoutButton();
 };
 
