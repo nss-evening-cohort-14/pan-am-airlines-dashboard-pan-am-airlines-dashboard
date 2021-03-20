@@ -10,7 +10,7 @@ const showFood = (array) => {
     <h5 id="food-name-title--${item.firebaseKey}" class="card-title">${item.foodName}</h5>
       <p class="card-desc">${item.foodPrice}</p>
       <a href="#" class="btn btn-danger" id="viewFood--${item.firebaseKey}">View Entree</a>
-      <a href="#" class="btn btn-danger" id="deleteFood--${item.firebaseKey}">Delete Entree</a>
+      <a href="#" class="btn btn-danger" id="delete-food--${item.firebaseKey}">Delete Entree</a>
     </div>
   </div>`;
   });
