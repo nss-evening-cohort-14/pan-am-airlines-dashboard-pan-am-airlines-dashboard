@@ -13,16 +13,12 @@ const startApp = (userObject) => {
   domBuilder();
   home();
   navBar();
-  navEvents(userObject);
-  airportDomEvents(userObject.uid);
-  planeDomEvents(userObject);
-  foodDomEvents();
   navEvents(userObject.uid);
   crewDomEvents(userObject.uid);
   baggageDomEvents(userObject.uid);
-  planeDomEvents(userObject.uid);
   airportDomEvents(userObject.uid);
   foodDomEvents(userObject.uid);
+  planeDomEvents(userObject);
   logoutButton();
 };
 
