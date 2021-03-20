@@ -1,31 +1,37 @@
-const addPlane = () => {
-  document.querySelectorAll('#boards').innerHTML = '';
-  document.querySelectorAll('#add-button').innerHTML = '';
-  document.querySelectorAll('#modal').innerHTML = '';
-  document.querySelectorAll('#main-container').innerHTML = '';
-  document.querySelectorAll('#form-container').innerHTML = `<div class="card bg-light mb-3" style="width: 40em;">
+const addPlaneForm = () => {
+  document.querySelector('#modal').innerHTML = '';
+  document.querySelector('#add-button').innerHTML = '';
+  document.querySelector('#main-container').innerHTML = '';
+  document.querySelector('#form-container').innerHTML = `
+ <div class="card bg-light mb-3" style="width: 40em;">
   <div class="card-header"></div>
   <div class="card-body">
-    <h5 class="card-title"><h3>PLANES TRAINS AND MORE PLANES</h3></h5>
-    <p class="card-text">Suggest a plane for our lineup!</p>
-    <form id="submit-plane-form mx-auto" class="mb-4">
+    <h5 class="card-title"><h3>FROM THE FLIGHT DECK</h3></h5>
+    <p class="card-text">Add a plane to our international fleet!</p>
+    <form id="add-plane-form" class="mb-4">
       <div class="form-group">
+        <label for="image-plane">Image URL</label>
+        <input type="url" class="form-control" id="planeImage" placeholder="Image URL" required>
+      </div>
+      <div class="form-group" id="select-plane">
+      </div>
       <div class="form-group">
-      </div>
-        <label for="image">Image URL</label>
-        <input type="url" class="form-control" id="imageUrl" placeholder="Profile Image" required>
-      </div>
-        <label for="firstName">First Name #</label>
-        <input type="text" class="form-control" id="firstName" placeholder="FirstName" required>
+      <class="form-group-label" for="planeMake">Plane Make</class=>
+      <input type="text" class="form-control" id="planeMake" placeholder="Plane Make" required>
+    </div>
       <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+        <class="form-group-label" for="planeModel">Plane Model</class=>
+        <input type="text" class="form-control" id="planeModel" placeholder="Plane Model" required>
       </div>
-      <button type="submit" id="submit-plane" class="btn btn-primary">Apply</button>
+      <div class="form-group">
+        <class="form-group-label" for="planeCapacity">Plane Capacity</class=>
+        <input type="number" class="form-control" id="planeCapacity" placeholder="Capacity" required>
+      </div>
+      <button type="submit" id="submit-plane" class="btn btn-primary">Submit Plane</button>
     </form>
   </div>
 </div>
-`;
+    `;
 };
 
-export default addPlane;
+export default addPlaneForm;

@@ -1,7 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-
 body {
   background-color: rgb(66, 176, 250);
   color: BLUE;
@@ -9,10 +8,18 @@ body {
   margin-top: 100px;
 }
 
-#main-container {
+#app {
   display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  margin: auto;
+  justify-content: center;
+}
+
+#boards {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+}
+
+#form-container {
+  display: flex;
   justify-content: center;
 }

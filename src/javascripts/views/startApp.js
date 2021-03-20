@@ -1,28 +1,21 @@
-import domBuilder from '../components/forms/domBuilder';
-import navBar from '../components/forms/navBar';
-import getPlanes from '../helpers/data/planeData';
+import domBuilder from './domBuilder';
+import navEvents from '../events/navEvents';
+import home from './home';
+import navBar from '../components/navBar';
+import logoutButton from '../buttons/logoutButton';
+// import addPlaneForm from '../components/forms/addPlaneForm';
+import planeDomEvents from '../events/planeDomEvents';
+import { getPlanes } from '../helpers/data/planeData';
 import showPlanes from '../components/planes';
-import addPlane from '../components/forms/addPlaneForm';
-// import getFood from '../helpers/foodData';
-// import { showFood } from '../components/food';
-// import loginButton from '../components/loginButton';
-// import logoutButton from '../components/logoutButton';
-// import domEvents from '../events/domEvents';
-// import navEvents from '../events/navEvents';
-// import home from './home';
 
 const startApp = (userObject) => {
   domBuilder();
-  // home();
+  home();
   navBar();
-  // loginButton();
-  // logoutButton();
-  addPlane();
-  getPlanes(userObject).then((planesArray) => showPlanes(planesArray));
-  // getFood(userObject).then((foodServices) => showFood(foodServices));
-  // navEvents(userObject.uid);
-
-  // domEvents(userObject.uid);
+  navEvents(userObject);
+  planeDomEvents();
+  getPlanes().then((planes) => showPlanes(planes));
+  logoutButton();
 };
 
 export default startApp;

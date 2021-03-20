@@ -1,5 +1,6 @@
 const domBuilder = () => {
-  document.querySelector('#app').innerHTML = `<div id="navigation"></div>
+  document.querySelector('#app').innerHTML = `
+    <div id="navigation"></div>
     <div id="boards"></div>
     <div id="form-container"></div>
     <div id="add-button"></div>
