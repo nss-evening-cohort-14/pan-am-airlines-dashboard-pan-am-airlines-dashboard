@@ -16,7 +16,6 @@ const foodDomEvents = (uid) => {
         foodName: document.querySelector('#foodName').value,
         foodPrice: document.querySelector('#foodPrice').value,
       };
-      console.warn(foodObject);
 
       createFood(foodObject, uid).then((foodArray) => showFood(foodArray));
       document.querySelector('#form-container').innerHTML = '';
