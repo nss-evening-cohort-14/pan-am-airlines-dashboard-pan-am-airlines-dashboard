@@ -17,4 +17,16 @@ const getSingleBag = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getBaggage, getSingleBag };
+// CREATE BAGGAGE
+const createBaggage = (baggageObject) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/baggages.json`, baggageObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/baggages/${response.data.name}.json`, body)
+        .then(() => {
+          getBaggage().then((baggageArray) => resolve(baggageArray));
+        });
+    }).catch((error) => reject(error));
+});
+
+export { getBaggage, getSingleBag, createBaggage };

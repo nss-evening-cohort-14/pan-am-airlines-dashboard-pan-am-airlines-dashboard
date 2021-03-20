@@ -1,5 +1,5 @@
 import { showAirports } from '../components/airports';
-import { showBaggage } from '../components/baggage';
+import { emptyBaggage, showBaggage } from '../components/baggage';
 import { showCrews } from '../components/crew';
 import { showFood } from '../components/food';
 import showPlanes from '../components/planes';
@@ -24,7 +24,13 @@ const navEvents = () => {
   });
 
   document.querySelector('#baggage').addEventListener('click', () => {
-    getBaggage().then((baggagesArray) => showBaggage(baggagesArray));
+    getBaggage().then((baggageArray) => {
+      if (baggageArray.length) {
+        showBaggage(baggageArray);
+      } else {
+        emptyBaggage();
+      }
+    });
   });
 
   document.querySelector('#foodService').addEventListener('click', () => {
