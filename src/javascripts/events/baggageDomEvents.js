@@ -5,7 +5,6 @@ import { createBaggage, deleteBaggage } from '../helpers/data/baggageData';
 
 const baggageDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
-    console.warn('hello');
     if (e.target.id.includes('delete-baggage')) {
       if (window.confirm('Are you sure you want to delete this bag?')) {
         const firebaseKey = e.target.id.split('--')[1];
