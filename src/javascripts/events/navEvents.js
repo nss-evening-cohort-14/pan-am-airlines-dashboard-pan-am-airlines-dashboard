@@ -4,9 +4,9 @@ import showFood from '../components/food';
 import showPlanes from '../components/planes';
 import { getAirports } from '../helpers/data/airportData';
 import { getBaggage } from '../helpers/data/baggageData';
+import { getCrews } from '../helpers/data/crewData';
 import { getPlanes } from '../helpers/data/planeData';
 import { getFood } from '../helpers/data/foodData';
-import { getCrews } from '../helpers/data/crewData';
 import { showBaggage } from '../components/baggage';
 
 // NAV EVENTS

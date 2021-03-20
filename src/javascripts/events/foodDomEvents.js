@@ -15,7 +15,6 @@ const foodDomEvents = (uid) => {
         foodImage: document.querySelector('#foodImage').value,
         foodName: document.querySelector('#foodName').value,
         foodPrice: document.querySelector('#foodPrice').value,
-        // uid: firebase.auth().currentUser.uid
       };
       console.warn(foodObject);
 
