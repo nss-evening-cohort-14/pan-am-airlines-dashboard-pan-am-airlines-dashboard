@@ -1,8 +1,8 @@
 import showFood from '../components/food';
 import addFoodForm from '../components/forms/addFoodForm';
-import { createFood } from '../helpers/data/foodData';
+import { createFood, deleteFood } from '../helpers/data/foodData';
 
-const foodDomEvents = (uid) => {
+const foodDomEvents = () => {
   // CLICK EVENT FOR SHOWING FORM FOR ADDING FOOD
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('add-food-btn')) {
@@ -17,8 +17,16 @@ const foodDomEvents = (uid) => {
         foodPrice: document.querySelector('#foodPrice').value,
       };
 
-      createFood(foodObject, uid).then((foodArray) => showFood(foodArray));
+      createFood(foodObject).then((foodArray) => showFood(foodArray));
       document.querySelector('#form-container').innerHTML = '';
+    }
+    // CLICK EVENT FOR DELETING FOOD
+    if (e.target.id.includes('delete-food')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete?')) {
+        const firebaseKey = e.target.id.split('--')[1];
+        deleteFood(firebaseKey).then((foodArray) => showFood(foodArray));
+      }
     }
   });
 };
