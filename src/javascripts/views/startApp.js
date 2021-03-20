@@ -19,7 +19,6 @@ const startApp = (userObject) => {
   planeDomEvents(userObject.uid);
   airportDomEvents(userObject.uid);
   foodDomEvents(userObject.uid);
-
   logoutButton();
 };
 
