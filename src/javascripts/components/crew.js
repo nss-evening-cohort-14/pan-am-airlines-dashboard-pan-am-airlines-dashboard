@@ -1,7 +1,6 @@
 const showCrews = (array) => {
   document.querySelector('#boards').innerHTML = '';
   document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-crew-btn">Add A Crew Member</button>';
-
   document.querySelector('#main-container').innerHTML = '';
 
   array.forEach((item) => {

@@ -1,5 +1,3 @@
-// import firebase from 'firebase/app';
-import 'firebase/auth';
 import showFood from '../components/food';
 import addFoodForm from '../components/forms/addFoodForm';
 import { createFood } from '../helpers/data/foodData';
