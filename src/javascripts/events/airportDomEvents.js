@@ -4,7 +4,7 @@ import { createAirport } from '../helpers/data/airportData';
 
 const airportDomEvents = (uid) => {
   document.querySelector('body').addEventListener('click', (e) => {
-    // CLICK EVENT FOR SHOWING FORM FOR ADDING A BOOK
+    // CLICK EVENT FOR SHOWING FORM FOR ADDING AN AIRPLANE
     if (e.target.id.includes('add-airport-btn')) {
       console.warn('CLICKED ADD BOOK BUTTON', e.target.id);
       addAirportForm();
@@ -21,6 +21,7 @@ const airportDomEvents = (uid) => {
       };
 
       createAirport(airportObject, uid).then((airportsArray) => showAirports(airportsArray));
+      document.querySelector('#form-container').innerHTML = '';
     }
   });
 };

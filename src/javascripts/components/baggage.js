@@ -7,7 +7,7 @@ const showBaggage = (array) => {
   array.forEach((item) => {
     document.querySelector('#main-container').innerHTML += `
     <div class="card m-4" style="width: 18rem;">
-    <img class="card-img-top" src=${item.baggageImage} style="height: 200px;">
+    <img class="card-img-top" src=${item.baggageImage}">
       <div class="card-body">
       <a href="#"><h5 id="baggage-name-title--${item.firebaseKey}" class="card-title">Baggage Number: ${item.baggageNumber}</h5></a>
         <a href="#"><h5 id="baggage-name-title--${item.firebaseKey}" class="card-title">Baggage Weight: ${item.baggageWeight}</h5></a>
