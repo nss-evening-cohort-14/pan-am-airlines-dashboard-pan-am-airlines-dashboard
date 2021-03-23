@@ -1,6 +1,4 @@
-const addBaggageForm = () => {
-  document.querySelector('#add-button').innerHTML = '';
-  document.querySelector('#main-container').innerHTML = '';
+const editBaggageForm = (baggageObject) => {
   document.querySelector('#form-container').innerHTML = `
     <div class="card bg-light mb-3" style="width: 40em;">
     <div class="card-header"></div>
@@ -10,20 +8,20 @@ const addBaggageForm = () => {
       <form id="submit-baggage-form mx-auto" class="mb-4">
       <div class="form-group">
         <label for="baggageNumber"></label>
-        <input type="text" class="form-control" id="baggageNumber" placeholder="*Baggage Number #0008975741" required>
+        <input type="text" class="form-control" id="baggageNumber" placeholder="*Baggage Number #0008975741" required value="${baggageObject.baggageNumber}">
       </div>
       <div class="form-group">
         <label for="baggageWeight"></label>
-        <input type="text" class="form-control" id="baggageWeight" placeholder="*Baggage Weight LBS" required>
+        <input type="text" class="form-control" id="baggageWeight" placeholder="*Baggage Weight LBS" required value="${baggageObject.baggageWeight}">
       </div>
       <div class="form-group">
         <label for="baggageImage"></label>
-        <input type="url" class="form-control" id="baggageImage" placeholder="*Baggage Image Required" required>
+        <input type="url" class="form-control" id="baggageImage" placeholder="*Baggage Image Required" required value="${baggageObject.baggageImage}">
       </div>
-      <button type="submit" id="submit-baggage-btn" class="btn btn-primary">Check-In Bag</button>
+      <button type="submit" id="update-baggage-btn--${baggageObject.firebaseKey}" class="btn btn-success">Re-Apply!</button>
     </form>
     </div>
   </div>`;
 };
 
-export default addBaggageForm;
+export default editBaggageForm;
