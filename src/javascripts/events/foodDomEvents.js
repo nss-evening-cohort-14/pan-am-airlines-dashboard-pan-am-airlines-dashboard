@@ -29,16 +29,17 @@ const foodDomEvents = () => {
     }
 
     // CLICK EVENT FOR EDITING FOOD
-    // if (e.target.id.includes('update-food')) {
-    //   const firebaseKey = e.target.id.split('--')[1];
-    //   e.preventDefault();
-    //   const foodObject = {
-    //     foodImage: document.querySelector('#foodImage').value,
-    //     foodName: document.querySelector('#foodName').value,
-    //     foodPrice: document.querySelector('#foodPrice').value,
-    //   };
-    //   updateFood(firebaseKey, foodObject).then((foodArray) => showFood(foodArray));
-    // }
+    if (e.target.id.includes('update-food')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      e.preventDefault();
+      const foodObject = {
+        foodImage: document.querySelector('#foodImage').value,
+        foodName: document.querySelector('#foodName').value,
+        foodPrice: document.querySelector('#foodPrice').value,
+      };
+      // updateFood(firebaseKey, foodObject).then((foodArray) => showFood(foodArray));
+      console.warn(firebaseKey, foodObject);
+    }
 
     // CLICK EVENT FOR DELETING FOOD
     if (e.target.id.includes('delete-food')) {

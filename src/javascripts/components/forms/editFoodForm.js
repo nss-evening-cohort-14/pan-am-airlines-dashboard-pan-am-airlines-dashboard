@@ -20,7 +20,7 @@ const editFoodForm = (foodObject) => {
         <class="form-group-label" for="Price">Food Price</class>
         <input type="text" class="form-control" id="foodPrice" value="${foodObject.foodPrice}" placeholder="Food Price" required>
       </div>
-      <button type="submit" id="submit-food" class="btn btn-primary">Submit Entree</button>
+      <button type="submit" id="update-food--${foodObject.firebaseKey}" class="btn btn-primary">Update Entree</button>
     </form>
   </div>
 </div>
