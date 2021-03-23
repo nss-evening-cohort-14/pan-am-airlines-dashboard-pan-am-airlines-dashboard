@@ -10,8 +10,8 @@ const showBaggage = (array) => {
       <div class="card-body">
       <a href="#"><h5 id="baggage-name-title--${item.firebaseKey}" class="card-title">Baggage Number: ${item.baggageNumber}</h5></a>
         <a href="#"><h5 id="baggage-name-title--${item.firebaseKey}" class="card-title">Baggage Weight: ${item.baggageWeight}</h5></a>
-        <button class="btn btn-danger" id="view-baggage--${item.firebaseKey}">View</button>
-        <button class="btn btn-danger" id="delete-baggage--${item.firebaseKey}">Delete</button>
+        <button class="btn btn-danger" id="edit-baggage-btn--${item.firebaseKey}">Edit</button>
+        <button class="btn btn-danger" id="delete-baggage-btn--${item.firebaseKey}">Delete</button>
       </div>
     </div>`;
   });

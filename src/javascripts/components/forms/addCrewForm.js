@@ -8,20 +8,20 @@ const addCrewForm = () => {
       <h5 class="card-title"><h3>Apply To mJoin Our Pan Am Family!</h3></h5>
       <form id="submit-crew-form mx-auto" class="mb-4">
       <div class="form-group">
-        <label for="firstName">First Name</label>
+        <label for="firstName"></label>
         <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
       </div>
       <div class="form-group">
-        <label for="lastName">Last Name</label>
+        <label for="lastName"></label>
         <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
       </div>
       <div class="form-group">
-        <label for="crewTitle">Job Title</label>
+        <label for="crewTitle"></label>
         <input type="text" class="form-control" id="crewTitle" placeholder="Job Ttile" required>
       </div>
       <div class="form-group">
-        <label for="imageUrl">Profile Photo</label>
-        <input type="url" class="form-control" id="imageUrl" placeholder="Profile Photo" required>
+        <label for="imageUrl"></label>
+        <input type="url" class="form-control" id="imageUrl" placeholder="Profile Image URL" required>
       </div>
       <button type="submit" id="submit-crew-btn" class="btn btn-primary">Apply!</button>
     </form>

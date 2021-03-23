@@ -4,21 +4,18 @@ import firebaseConfig from './auth/apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
-// GET CREW CARDS
 const getCrews = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/crews.json`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
 
-// GET CREW MEMBER
 const getSingleCrew = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/crews/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
-// CREATE CREW MEMBER
 const createCrew = (crewObject) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/crews.json`, crewObject)
     .then((response) => {
@@ -36,4 +33,10 @@ const deleteCrew = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getCrews, getSingleCrew, createCrew, deleteCrew };
+const updateCrew = (firebaseKey, crewObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/crews/${firebaseKey}.json`, crewObject)
+    .then(() => getCrews()).then((crewsArray) => resolve(crewsArray))
+    .catch((error) => reject(error));
+});
+
+export { getCrews, getSingleCrew, createCrew, deleteCrew, updateCrew };
