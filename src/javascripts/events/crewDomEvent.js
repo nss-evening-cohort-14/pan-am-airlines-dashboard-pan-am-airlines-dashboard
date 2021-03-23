@@ -24,7 +24,7 @@ const crewDomEvents = () => {
       document.querySelector('#form-container').innerHTML = '';
     }
 
-    if (e.target.id.includes('delete-crew-member')) {
+    if (e.target.id.includes('delete-crew-btn')) {
       if (window.confirm('Are you sure you want to FIRE this crew member?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteCrew(firebaseKey).then((crewsArray) => showCrews(crewsArray));
