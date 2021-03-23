@@ -10,7 +10,7 @@ const showCrews = (array) => {
       <div class="card-body">
         <a href="#"><h2 id="crew-name-title--${item.firebaseKey}" class="card-title text-white">${item.firstName} ${item.lastName}</h2></a>
         <h5 class="card-title">${item.crewTitle}</h5>
-        <button class="btn btn-danger" id="view-crew-member--${item.firebaseKey}">View</button>
+        <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-crew-btn--${item.firebaseKey}">Edit Profile</button>        
         <button class="btn btn-danger" id="delete-crew-member--${item.firebaseKey}">Delete</button>
       </div>
     </div>`;
