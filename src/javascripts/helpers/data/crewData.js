@@ -11,7 +11,7 @@ const getCrews = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-// GET CREW MEMBER
+// GET SINGLE CREW MEMBER
 const getSingleCrew = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/crews/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
@@ -36,4 +36,11 @@ const deleteCrew = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getCrews, getSingleCrew, createCrew, deleteCrew };
+// UPDATE CREW MEMBER
+const updateCrew = (firebaseKey, crewObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/crews/${firebaseKey}.json`, crewObject)
+    .then(() => getCrews()).then((crewsArray) => resolve(crewsArray))
+    .catch((error) => reject(error));
+});
+
+export { getCrews, getSingleCrew, createCrew, deleteCrew, updateCrew };
