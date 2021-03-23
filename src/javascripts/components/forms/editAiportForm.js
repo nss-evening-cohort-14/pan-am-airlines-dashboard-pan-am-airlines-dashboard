@@ -1,4 +1,4 @@
-const addAirportForm = () => {
+const editAirportForm = (airportObject) => {
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#main-container').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `
@@ -9,23 +9,23 @@ const addAirportForm = () => {
     <form id="submit-airport-form" class="mb-4">
       <div class="form-group">
         <label for="title">Airport Name</label>
-        <input type="text" class="form-control" id="airportName" aria-describedby="Airportitle" placeholder="Airport Title" required>
+        <input type="text" class="form-control" id="airportName" aria-describedby="Airportitle" placeholder="Edit Airport Title" required>
       </div>
       <div class="form-group">
         <label for="image-airport">Image URL</label>
-        <input type="url" class="form-control" id="airportImage" placeholder="Image URL" required>
+        <input type="url" class="form-control" id="airportImage" placeholder="Image URL" required required value="${airportObject.image}">
       </div>
       <div class="form-group" id="select-airport">
       </div>
       <div class="form-group">
         <class="form-group-label" for="description">Airport Locations</class=>
-        <input type="text" class="form-control" id="airportLocation" placeholder="Airport Description" required>
+        <input type="text" class="form-control" id="airportLocation" placeholder="Airport Description" required value="${airportObject.airportLocation}">
       </div>
-      <button type="submit" id="submit-airport" class="btn btn-primary">Submit Airport</button>
+      <button type="submit" id="update-airport-btn--${airportObject.firebaseKey} class="btn btn-primary">Edit Airport</button>
     </form>
   </div>
 </div>
     `;
 };
 
-export default addAirportForm;
+export default editAirportForm;
