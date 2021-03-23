@@ -4,7 +4,7 @@ const editBaggageForm = (baggageObject) => {
     <div class="card-header"></div>
     <div class="card-body">
       <h5 class="card-title"><h3>Pan Am Claims Department</h3></h5>
-      <p class="card-text">Exclusive First & Clipper class check-in service.</p>
+      <p class="card-text">Exclusive First & Clipper class check-in service.</p>https://github.com/nss-evening-cohort-14/pan-am-group-project/blob/update-baggage/src/javascripts/components/forms/editBaggageForm.js
       <form id="submit-baggage-form mx-auto" class="mb-4">
       <div class="form-group">
         <label for="baggageNumber"></label>
@@ -18,7 +18,7 @@ const editBaggageForm = (baggageObject) => {
         <label for="baggageImage"></label>
         <input type="url" class="form-control" id="baggageImage" placeholder="*Baggage Image Required" required value="${baggageObject.baggageImage}">
       </div>
-      <button type="submit" id="update-baggage-btn--${baggageObject.firebaseKey}" class="btn btn-success">Re-Apply!</button>
+      <button type="submit" id="update-baggage-btn--${baggageObject.firebaseKey}" class="btn btn-success">Update Bag!</button>
     </form>
     </div>
   </div>`;
