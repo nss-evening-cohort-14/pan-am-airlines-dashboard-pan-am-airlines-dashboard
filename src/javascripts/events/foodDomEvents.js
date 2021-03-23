@@ -1,6 +1,8 @@
 import showFood from '../components/food';
 import addFoodForm from '../components/forms/addFoodForm';
-import { createFood, deleteFood, getSingleFood } from '../helpers/data/foodData';
+import {
+  createFood, deleteFood, getSingleFood, updateFood
+} from '../helpers/data/foodData';
 import editFoodForm from '../components/forms/editFoodForm';
 
 const foodDomEvents = () => {
@@ -37,8 +39,8 @@ const foodDomEvents = () => {
         foodName: document.querySelector('#foodName').value,
         foodPrice: document.querySelector('#foodPrice').value,
       };
-      // updateFood(firebaseKey, foodObject).then((foodArray) => showFood(foodArray));
-      console.warn(firebaseKey, foodObject);
+      updateFood(firebaseKey, foodObject).then((foodArray) => showFood(foodArray));
+      document.querySelector('#form-container').innerHTML = '';
     }
 
     // CLICK EVENT FOR DELETING FOOD

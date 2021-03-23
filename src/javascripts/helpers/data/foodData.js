@@ -1,3 +1,4 @@
+import firebase from 'firebase/app';
 import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
@@ -32,13 +33,20 @@ const createFood = (foodObject) => new Promise((resolve, reject) => {
         });
     }).catch((error) => reject(error));
 });
-// UPDATE FOOD
+// GET SINGLE FOOD
 const getSingleFood = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/foodServices/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
+// UPDATE FOOD
+const updateFood = (firebaseKey, foodObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/foodServices/${firebaseKey}.json`, foodObject)
+    .then(() => getFood(firebase.auth().currentUser.uid)).then((foodArray) => resolve(foodArray))
+    .catch((error) => reject(error));
+});
+
 export {
-  getFood, createFood, deleteFood, getSingleFood
+  getFood, createFood, deleteFood, getSingleFood, updateFood
 };
