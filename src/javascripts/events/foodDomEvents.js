@@ -1,6 +1,7 @@
 import showFood from '../components/food';
 import addFoodForm from '../components/forms/addFoodForm';
-import { createFood, deleteFood } from '../helpers/data/foodData';
+import { createFood, deleteFood, getSingleFood } from '../helpers/data/foodData';
+import editFoodForm from '../components/forms/editFoodForm';
 
 const foodDomEvents = () => {
   // CLICK EVENT FOR SHOWING FORM FOR ADDING FOOD
@@ -20,6 +21,25 @@ const foodDomEvents = () => {
       createFood(foodObject).then((foodArray) => showFood(foodArray));
       document.querySelector('#form-container').innerHTML = '';
     }
+    // CLICK EVENT FOR SHOWING FORM FOR editing FOOD
+    if (e.target.id.includes('edit-food-btn')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      // console.warn(firebaseKey);
+      getSingleFood(firebaseKey).then((foodObject) => editFoodForm(foodObject));
+    }
+
+    // CLICK EVENT FOR EDITING FOOD
+    // if (e.target.id.includes('update-food')) {
+    //   const firebaseKey = e.target.id.split('--')[1];
+    //   e.preventDefault();
+    //   const foodObject = {
+    //     foodImage: document.querySelector('#foodImage').value,
+    //     foodName: document.querySelector('#foodName').value,
+    //     foodPrice: document.querySelector('#foodPrice').value,
+    //   };
+    //   updateFood(firebaseKey, foodObject).then((foodArray) => showFood(foodArray));
+    // }
+
     // CLICK EVENT FOR DELETING FOOD
     if (e.target.id.includes('delete-food')) {
       // eslint-disable-next-line no-alert

@@ -32,5 +32,13 @@ const createFood = (foodObject) => new Promise((resolve, reject) => {
         });
     }).catch((error) => reject(error));
 });
+// UPDATE FOOD
+const getSingleFood = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/foodServices/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
 
-export { getFood, createFood, deleteFood };
+export {
+  getFood, createFood, deleteFood, getSingleFood
+};
