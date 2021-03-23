@@ -12,7 +12,7 @@ const foodDomEvents = () => {
       addFoodForm();
     }
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING FOOD
-    if (e.target.id.includes('submit-food')) {
+    if (e.target.id.includes('submit-food-btn')) {
       e.preventDefault();
       const foodObject = {
         foodImage: document.querySelector('#foodImage').value,
@@ -31,7 +31,7 @@ const foodDomEvents = () => {
     }
 
     // CLICK EVENT FOR EDITING FOOD
-    if (e.target.id.includes('update-food')) {
+    if (e.target.id.includes('update-food-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
       const foodObject = {
@@ -44,7 +44,7 @@ const foodDomEvents = () => {
     }
 
     // CLICK EVENT FOR DELETING FOOD
-    if (e.target.id.includes('delete-food')) {
+    if (e.target.id.includes('delete-food-btn')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const firebaseKey = e.target.id.split('--')[1];
