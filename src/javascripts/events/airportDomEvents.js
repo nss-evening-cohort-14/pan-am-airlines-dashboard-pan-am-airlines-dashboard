@@ -11,13 +11,6 @@ const airportDomEvents = () => {
     if (e.target.id.includes('add-airport-btn')) {
       addAirportForm();
     }
-
-    // CLICK EVENT FOR SHOWING FORM FOR EDITING AIRPORT
-    if (e.target.id.includes('edit-airport')) {
-      const firebaseKey = e.target.id.split('--')[1];
-      getSingleAirport(firebaseKey).then((airportObject));
-      editAirportForm(airportObject);
-    }
     // CLICK EVENT FOR DELETING AN AIRPORT
     if (e.target.id.includes('delete-airport')) {
       // eslint-disable-next-line no-alert
@@ -50,6 +43,12 @@ const airportDomEvents = () => {
 
       updateAirport(firebaseKey, airportObject).then((airportsArray) => showAirports(airportsArray));
       document.querySelector('#form-container').innerHTML = '';
+    }
+    // CLICK EVENT FOR SHOWING FORM FOR EDITING AIRPORT
+    if (e.target.id.includes('edit-airport')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      getSingleAirport(firebaseKey).then((airportObject));
+      editAirportForm(airportObject);
     }
   });
 };
