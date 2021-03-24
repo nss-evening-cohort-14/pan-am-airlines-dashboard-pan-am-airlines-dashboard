@@ -3,6 +3,9 @@ const editPlaneForm = (planeObject) => {
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#main-container').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `
+  <div class="card bg-light mb-3" style="width: 40em;">
+  <div class="card-header"></div>
+  <div class="card-body">
     <form id="edit-plane-form" class="mb-4">
       <div class="form-group">
         <label for="image-plane">Image URL</label>
@@ -26,6 +29,7 @@ const editPlaneForm = (planeObject) => {
     </form>
   </div>
 </div>
+
     `;
 };
 
