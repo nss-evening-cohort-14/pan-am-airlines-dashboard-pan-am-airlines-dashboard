@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
@@ -39,4 +38,10 @@ const updateBaggage = (firebaseKey, baggageObject) => new Promise((resolve, reje
     .catch((error) => reject(error));
 });
 
-export { getBaggage, getSingleBag, createBaggage, deleteBaggage, updateBaggage };
+export {
+  getBaggage,
+  getSingleBag,
+  createBaggage,
+  deleteBaggage,
+  updateBaggage
+};

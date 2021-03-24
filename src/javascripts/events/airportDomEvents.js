@@ -14,7 +14,7 @@ const airportDomEvents = () => {
     // CLICK EVENT FOR DELETING AN AIRPORT
     if (e.target.id.includes('delete-airport')) {
       // eslint-disable-next-line no-alert
-      if (window.confirm('Want to delete?')) {
+      if (window.confirm('Are you sure you want to delete this airport?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteAirport(firebaseKey).then((airportsArray) => showAirports(airportsArray));
       }

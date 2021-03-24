@@ -3,8 +3,8 @@
 
 
 body {
-  background-color: rgb(66, 176, 250);
-  color: BLUE;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmB4ieXqn5sxcc0ixSVLvpi83LLJOdgBIwYA&usqp=CAU');
+  color: black;
   text-align: center;
   margin-top: 100px;
 }
@@ -18,4 +18,8 @@ body {
   text-align: center;
   margin: auto;
   justify-content: center;
+}
+.btn:hover {
+  background-color: black; 
+  color: white;
 }
