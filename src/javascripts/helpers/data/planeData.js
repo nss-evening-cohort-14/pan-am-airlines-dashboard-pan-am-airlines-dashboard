@@ -1,3 +1,5 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
@@ -33,7 +35,24 @@ const createPlane = (planeObject) => new Promise((resolve, reject) => {
         });
     }).catch((error) => reject(error));
 });
+  // GET SINGLE PLANE //
+const getSinglePlane = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/planes/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
+// UPDATE PLANE //
+const updatePlane = (firebaseKey, planeObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/planes/${firebaseKey}.json`, planeObject)
+    .then(() => getPlanes(firebase.auth().currentUser.uid)).then((planesArray) => resolve(planesArray))
+    .catch((error) => reject(error));
+});
 
 export {
-  getPlanes, createPlane, deletePlane
+  getPlanes,
+  createPlane,
+  deletePlane,
+  getSinglePlane,
+  updatePlane
 };

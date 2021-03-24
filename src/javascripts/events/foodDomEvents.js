@@ -9,6 +9,7 @@ const foodDomEvents = () => {
   // CLICK EVENT FOR SHOWING FORM FOR ADDING FOOD
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('add-food-btn')) {
+      document.querySelector('#form-container').innerHTML = '';
       addFoodForm();
     }
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING FOOD
