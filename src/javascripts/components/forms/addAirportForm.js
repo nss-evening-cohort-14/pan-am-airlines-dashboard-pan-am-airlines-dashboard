@@ -5,7 +5,6 @@ const addAirportForm = () => {
  <div class="card bg-light mb-3" style="width: 40em;">
   <div class="card-header"></div>
   <div class="card-body">
-    <h5 class="card-title"><h3>FROM THE FLIGHT DECK</h3></h5>
     <form id="submit-airport-form" class="mb-4">
       <div class="form-group">
         <label for="title">Airport Name</label>

@@ -1,6 +1,6 @@
 import { showAirports } from '../components/airports';
 import addAirportForm from '../components/forms/addAirportForm';
-import editAirportForm from '../components/forms/editAiportForm';
+import editAirportForm from '../components/forms/editAirportForm';
 import {
   createAirport, deleteAirport, updateAirport, getSingleAirport
 } from '../helpers/data/airportData';
@@ -31,6 +31,11 @@ const airportDomEvents = () => {
       createAirport(airportObject).then((airportsArray) => showAirports(airportsArray));
       document.querySelector('#form-container').innerHTML = '';
     }
+    // CLICK EVENT FOR EDITING AIRPORT
+    if (e.target.id.includes('edit-airport-btn')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      getSingleAirport(firebaseKey).then((airportObject) => editAirportForm(airportObject));
+    }
     // CLICK EVENT FOR SUBMITTING FORM FOR EDITING AIRPORT
     if (e.target.id.includes('update-airport-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
@@ -43,12 +48,6 @@ const airportDomEvents = () => {
 
       updateAirport(firebaseKey, airportObject).then((airportsArray) => showAirports(airportsArray));
       document.querySelector('#form-container').innerHTML = '';
-    }
-    // CLICK EVENT FOR SHOWING FORM FOR EDITING AIRPORT
-    if (e.target.id.includes('edit-airport')) {
-      const firebaseKey = e.target.id.split('--')[1];
-      getSingleAirport(firebaseKey).then((airportObject));
-      editAirportForm(airportObject);
     }
   });
 };
