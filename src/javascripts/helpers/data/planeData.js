@@ -34,4 +34,6 @@ const createPlane = (planeObject) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-export { getPlanes, createPlane, deletePlane };
+export {
+  getPlanes, createPlane, deletePlane
+};
