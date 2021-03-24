@@ -9,7 +9,7 @@ const showAirports = (array) => {
     <div class="card-body">
     <h5 id="airport-name-title--${item.firebaseKey}" class="card-title">${item.airportName}</h5>
       <p class="card-desc">${item.airportLocation}</p>
-      <a href="#" class="btn btn-danger" id="edit-airport--${item.firebaseKey}">Edit Airport</a>
+      <a href="#" class="btn btn-danger" id="edit-airport-btn--${item.firebaseKey}">Edit Airport</a>
       <a href="#" class="btn btn-danger" id="delete-airport--${item.firebaseKey}">Delete Airport</a>
     </div>
   </div>`;

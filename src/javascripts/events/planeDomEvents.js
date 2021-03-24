@@ -12,14 +12,12 @@ const planeDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A PLANE
     if (e.target.id.includes('add-plane-btn')) {
-      document.querySelector('#form-container').innerHTML = '';
       addPlaneForm();
     }
     // CLICK EVENT TO DELETE PLANE //
     if (e.target.id.includes('delete-plane')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete this plane from our fleet?')) {
-        console.warn('DELETE PLANE', e.target.id);
         const firebaseKey = e.target.id.split('--')[1];
         deletePlane(firebaseKey).then((planesArray) => showPlanes(planesArray));
       }
@@ -39,7 +37,6 @@ const planeDomEvents = () => {
     // CLICK EVENT FOR FORM TO EDIT A PLANE //
     if (e.target.id.includes('edit-plane-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
-      // console.warn(firebaseKey);
       getSinglePlane(firebaseKey).then((planeObject) => editPlaneForm(planeObject));
     }
     // CLICK EVENT TO UPDATE PLANE

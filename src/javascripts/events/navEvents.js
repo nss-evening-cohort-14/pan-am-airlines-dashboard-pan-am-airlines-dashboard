@@ -13,22 +13,27 @@ import { showBaggage } from '../components/baggage';
 const navEvents = () => {
   document.querySelector('#planes').addEventListener('click', () => {
     getPlanes().then((planesArray) => showPlanes(planesArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
 
   document.querySelector('#airport').addEventListener('click', () => {
     getAirports().then((airportsArray) => showAirports(airportsArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
 
   document.querySelector('#crew').addEventListener('click', () => {
     getCrews().then((crewsArray) => showCrews(crewsArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
 
   document.querySelector('#baggage').addEventListener('click', () => {
     getBaggage().then((baggageArray) => showBaggage(baggageArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
 
   document.querySelector('#foodService').addEventListener('click', () => {
     getFood().then((foodServiceArray) => showFood(foodServiceArray));
+    document.querySelector('#form-container').innerHTML = '';
   });
 };
 
