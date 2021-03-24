@@ -26,7 +26,6 @@ const foodDomEvents = () => {
     // CLICK EVENT FOR SHOWING FORM FOR editing FOOD
     if (e.target.id.includes('edit-food-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
-      // console.warn(firebaseKey);
       getSingleFood(firebaseKey).then((foodObject) => editFoodForm(foodObject));
     }
 
