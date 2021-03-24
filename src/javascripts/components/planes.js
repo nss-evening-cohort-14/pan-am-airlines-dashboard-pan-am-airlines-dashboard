@@ -8,7 +8,7 @@ const showPlanes = (arr) => {
     <img class="card-img-top" src=${item.planeImage} alt=${item.planeMake}">
     <div class="card-body">
     <h5 class="card-title">${item.planeMake}</h5>
-    <p class="card-text bold">${item.s ? `<span class="badge badge-info sale-badge"><i class="fa fa-bell" aria-hidden="true"></i> Plane Model</span> Plane Model ${item.planeModel}` : `Plane Model: ${item.planeModel}`}</p>
+    <p class="card-desc">${item.planeModel}</p>
     <hr>
     <h6 class="plane-capacity"> Capacity: ${item.planeCapacity}</h6>
     <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-plane-btn--${item.firebaseKey}">Edit Plane</button>

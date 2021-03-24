@@ -1,8 +1,7 @@
 const home = () => {
   document.querySelector('#main-container').innerHTML = `
   <div class="container d-flex justify-content-center flex-column" id="landing-page">
-  <div class="jumbotron" style="background-color: white">
-    <div class="container"><img src="https://i.pinimg.com/originals/6c/2c/d2/6c2cd275417d3282fb801e25464f98f9.png" style="width: 7em; margin-bottom: 2em;" alt="">
+  <div class="jumbotron" style="background:none !important;">
       <h1 class="display-4">WELCOME TO THE PAN AM EXERIENCE!</h1>
       <p class="lead">Relive the magic of flying onboard a luxurious Pan Am 747...</p>
       <p>A fine dining experience in the tradition of Pan Am</p>

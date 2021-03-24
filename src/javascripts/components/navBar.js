@@ -1,6 +1,7 @@
 const navBar = () => {
   document.querySelector('#navigation').innerHTML = `
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container"><img src="https://i.pinimg.com/originals/6c/2c/d2/6c2cd275417d3282fb801e25464f98f9.png" style="width: 3em; margin-bottom: 1em; background:none !important;" alt="">
         <a class="navbar-brand title" href="#" id="home-screen">Pan Am Airlines</a>
         <button
           class="navbar-toggler"

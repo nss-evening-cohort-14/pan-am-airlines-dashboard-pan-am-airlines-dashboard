@@ -51,6 +51,9 @@ const updateAirport = (firebaseKey, airportObject) => new Promise((resolve, reje
 });
 
 export {
-  getAirports, createAirport, deleteAirport, updateAirport,
+  getAirports,
+  createAirport,
+  deleteAirport,
+  updateAirport,
   getSingleAirport
 };

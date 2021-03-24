@@ -48,5 +48,9 @@ const updateFood = (firebaseKey, foodObject) => new Promise((resolve, reject) =>
 });
 
 export {
-  getFood, createFood, deleteFood, getSingleFood, updateFood
+  getFood,
+  createFood,
+  deleteFood,
+  getSingleFood,
+  updateFood
 };
