@@ -1,9 +1,12 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable no-alert */
 import { showBaggage } from '../components/baggage';
 import addBaggageForm from '../components/forms/addBaggageForm';
 import editBaggageForm from '../components/forms/editBaggageForm';
-import { createBaggage, deleteBaggage, getSingleBag, updateBaggage } from '../helpers/data/baggageData';
+import {
+  createBaggage,
+  deleteBaggage,
+  getSingleBag,
+  updateBaggage
+} from '../helpers/data/baggageData';
 
 const baggageDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -29,6 +32,7 @@ const baggageDomEvents = () => {
     }
 
     if (e.target.id.includes('delete-baggage-btn')) {
+      // eslint-disable-next-line no-alert
       if (window.confirm('Are you sure you want to delete this bag?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteBaggage(firebaseKey).then((baggageArray) => showBaggage(baggageArray));

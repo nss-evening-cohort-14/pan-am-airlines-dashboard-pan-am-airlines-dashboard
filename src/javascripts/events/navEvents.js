@@ -8,8 +8,8 @@ import { getCrews } from '../helpers/data/crewData';
 import { getPlanes } from '../helpers/data/planeData';
 import { getFood } from '../helpers/data/foodData';
 import { showBaggage } from '../components/baggage';
+import home from '../views/home';
 
-// NAV EVENTS
 const navEvents = () => {
   document.querySelector('#planes').addEventListener('click', () => {
     getPlanes().then((planesArray) => showPlanes(planesArray));
@@ -33,6 +33,10 @@ const navEvents = () => {
 
   document.querySelector('#foodService').addEventListener('click', () => {
     getFood().then((foodServiceArray) => showFood(foodServiceArray));
+    document.querySelector('#form-container').innerHTML = '';
+  });
+  document.querySelector('#home-screen').addEventListener('click', () => {
+    home();
     document.querySelector('#form-container').innerHTML = '';
   });
 };

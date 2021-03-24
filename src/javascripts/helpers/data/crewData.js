@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
@@ -39,4 +38,10 @@ const updateCrew = (firebaseKey, crewObject) => new Promise((resolve, reject) =>
     .catch((error) => reject(error));
 });
 
-export { getCrews, getSingleCrew, createCrew, deleteCrew, updateCrew };
+export {
+  getCrews,
+  getSingleCrew,
+  createCrew,
+  deleteCrew,
+  updateCrew
+};
