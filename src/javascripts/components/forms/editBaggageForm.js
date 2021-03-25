@@ -4,7 +4,7 @@ const editBaggageForm = (baggageObject) => {
     <div class="card-header"></div>
     <div class="card-body">
       <h5 class="card-title"><h3>Pan Am Claims Department</h3></h5>
-      <p class="card-text">Exclusive First & Clipper class check-in service.</p>https://github.com/nss-evening-cohort-14/pan-am-group-project/blob/update-baggage/src/javascripts/components/forms/editBaggageForm.js
+      <p class="card-text">Exclusive First & Clipper class check-in service.
       <form id="submit-baggage-form mx-auto" class="mb-4">
       <div class="form-group">
         <label for="baggageNumber"></label>

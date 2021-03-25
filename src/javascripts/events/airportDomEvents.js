@@ -7,7 +7,6 @@ import {
 
 const airportDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
-    // CLICK EVENT FOR SHOWING FORM FOR ADDING AN AIRPORT
     if (e.target.id.includes('add-airport-btn')) {
       addAirportForm();
     }

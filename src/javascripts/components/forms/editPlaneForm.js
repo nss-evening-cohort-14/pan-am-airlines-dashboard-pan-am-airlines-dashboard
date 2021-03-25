@@ -3,6 +3,9 @@ const editPlaneForm = (planeObject) => {
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#main-container').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `
+  <div class="card bg-light mb-3" style="width: 40em;">
+  <div class="card-header"></div>
+  <div class="card-body">
     <form id="edit-plane-form" class="mb-4">
       <div class="form-group">
         <label for="image-plane">Image URL</label>
@@ -22,10 +25,11 @@ const editPlaneForm = (planeObject) => {
         <class="form-group-label" for="planeCapacity">Plane Capacity</class=>
         <input type="number" class="form-control" id="planeCapacity" placeholder="Capacity" required value="${planeObject.planeCapacity}">
       </div>
-      <button type="submit" id="update-plane--${planeObject.firebaseKey}" class="btn btn-primary">Update Plane</button>
+      <button type="submit" id="update-plane--${planeObject.firebaseKey}" class="btn">Update Plane</button>
     </form>
   </div>
 </div>
+
     `;
 };
 

@@ -27,7 +27,7 @@ const addPlaneForm = () => {
         <class="form-group-label" for="planeCapacity">Plane Capacity</class=>
         <input type="number" class="form-control" id="planeCapacity" placeholder="Capacity" required>
       </div>
-      <button type="submit" id="submit-plane" class="btn btn-primary">Submit Plane</button>
+      <button type="submit" id="submit-plane" class="btn">Submit Plane</button>
     </form>
   </div>
 </div>
