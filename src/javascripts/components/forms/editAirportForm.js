@@ -3,7 +3,7 @@ const editAirportForm = (airportObject) => {
  <div class="card bg-light mb-3" style="width: 40em;">
   <div class="card-header"></div>
   <div class="card-body">
-    <form id="submit-airport-form" class="mb-4">
+    <form id="submit-form" class="mb-4">
       <div class="form-group">
         <label for="title">Airport Name</label>
         <input type="text" class="form-control" id="airportName" aria-describedby="Airportitle" placeholder="Edit Airport Name" required value="${airportObject.airportName}">

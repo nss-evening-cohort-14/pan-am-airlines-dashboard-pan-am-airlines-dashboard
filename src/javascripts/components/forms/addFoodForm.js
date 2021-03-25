@@ -22,7 +22,7 @@ const addFoodForm = () => {
         <class="form-group-label" for="Price">Food Price</class>
         <input type="text" class="form-control" id="foodPrice" placeholder="Food Price" required>
       </div>
-      <button type="submit" id="submit-food-btn" class="btn btn-primary">Submit Entree</button>
+      <button type="submit" id="submit-food-btn" class="btn">Submit Entree</button>
     </form>
   </div>
 </div>

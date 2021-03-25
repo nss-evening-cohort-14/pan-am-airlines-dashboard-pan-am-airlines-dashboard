@@ -20,7 +20,7 @@ const addBaggageForm = () => {
         <label for="baggageImage"></label>
         <input type="url" class="form-control" id="baggageImage" placeholder="*Baggage Image Required" required>
       </div>
-      <button type="submit" id="submit-baggage-btn" class="btn btn-primary">Check-In Bag</button>
+      <button type="submit" id="submit-baggage-btn" class="btn">Check-In Bag</button>
     </form>
     </div>
   </div>`;
