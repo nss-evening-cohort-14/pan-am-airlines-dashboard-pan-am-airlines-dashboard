@@ -23,7 +23,7 @@ const addCrewForm = () => {
         <label for="imageUrl"></label>
         <input type="url" class="form-control" id="imageUrl" placeholder="Profile Image URL" required>
       </div>
-      <button type="submit" id="submit-crew-btn" class="btn btn-primary">Apply!</button>
+      <button type="submit" id="submit-crew-btn" class="btn">Apply!</button>
     </form>
     </div>
   </div>`;

@@ -25,7 +25,7 @@ const editPlaneForm = (planeObject) => {
         <class="form-group-label" for="planeCapacity">Plane Capacity</class=>
         <input type="number" class="form-control" id="planeCapacity" placeholder="Capacity" required value="${planeObject.planeCapacity}">
       </div>
-      <button type="submit" id="update-plane--${planeObject.firebaseKey}" class="btn btn-primary">Update Plane</button>
+      <button type="submit" id="update-plane--${planeObject.firebaseKey}" class="btn">Update Plane</button>
     </form>
   </div>
 </div>

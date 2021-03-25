@@ -1,6 +1,6 @@
 const showPlanes = (arr) => {
   document.querySelector('#boards').innerHTML = '';
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-plane-btn">Add A Plane</button>';
+  document.querySelector('#add-button').innerHTML = '<button class="btn" id="add-plane-btn">Add A Plane</button>';
   document.querySelector('#main-container').innerHTML = '';
 
   arr.forEach((item) => {
@@ -11,8 +11,8 @@ const showPlanes = (arr) => {
     <p class="card-desc">${item.planeModel}</p>
     <hr>
     <h6 class="plane-capacity"> Capacity: ${item.planeCapacity}</h6>
-    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-plane-btn--${item.firebaseKey}">Edit Plane</button>
-    <button class="btn btn-danger" id="delete-plane--${item.firebaseKey}">Delete Plane</button>
+    <button class="btn" data-toggle="modal" data-target="#formModal" id="edit-plane-btn--${item.firebaseKey}">Edit Plane</button>
+    <button class="btn" id="delete-plane--${item.firebaseKey}">Delete Plane</button>
     </div>
   </div>`;
   });
