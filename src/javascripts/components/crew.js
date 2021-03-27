@@ -5,11 +5,12 @@ const showCrews = (array) => {
 
   array.forEach((item) => {
     document.querySelector('#main-container').innerHTML += `
-    <div class="card m-4 mt-5" style="width: 20em background-color: rgb(247, 233, 232)"; border: none">
+    <div class="card m-4 mt-5" style="width: 20em; background-color: rgb(247, 233, 232)"; border: none">
     <img class="card-img-top" src=${item.imageUrl}" style="border-radius: 50%; border: 1em solid white">
       <div class="card-body">
-        <a href="#"><h2 id="crew-name-title--${item.firebaseKey}" class="card-title text-white">${item.firstName} ${item.lastName}</h2></a>
+        <h2 id="crew-name-title--${item.firebaseKey}" class="card-title text-black">${item.firstName} ${item.lastName}</h2>
         <h5 class="card-title">${item.crewTitle}</h5>
+        <hr>
         <button class="btn" id="edit-crew-btn--${item.firebaseKey}">Edit Profile</button>        
         <button class="btn" id="delete-crew-btn--${item.firebaseKey}">Delete</button>
       </div>
