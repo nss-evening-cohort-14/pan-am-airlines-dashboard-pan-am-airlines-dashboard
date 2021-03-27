@@ -1,32 +1,41 @@
 {
-  "-MVsZwV-xBOue6jTHaTC" : {
-    "firstName" : "Dorelle",
-    "imageUrl" : "http://dummyimage.com/300x.png/dddddd/000000",
-    "lastName" : "Wardingly",
-    "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
-  },
   "-MVsZwV1AUCd-1qZ0tXa" : {
-    "firstName" : "Roch",
-    "imageUrl" : "http://dummyimage.com/300x.png/dddddd/000000",
-    "lastName" : "Cuardall",
+    "crewTitle" : "First Officer",
+    "firebaseKey" : "-MVsZwV1AUCd-1qZ0tXa",
+    "firstName" : "Nathan",
+    "imageUrl" : "https://avatars.githubusercontent.com/u/76710923?s=460&u=b9a8b3b157f950d3b2d3cfae65bcbdd9f822a2a4&v=4",
+    "lastName" : "Keith",
     "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
   },
   "-MVsZwV3a--j0PWsmciu" : {
-    "firstName" : "Harris",
-    "imageUrl" : "http://dummyimage.com/300x.png/ff4444/ffffff",
-    "lastName" : "Grigoliis",
+    "crewTitle" : "Technical Engineer",
+    "firebaseKey" : "-MVsZwV3a--j0PWsmciu",
+    "firstName" : "Sara",
+    "imageUrl" : "https://avatars.githubusercontent.com/u/25774314?s=460&u=f02c0b3ec9ec2c2cf3ed4ecae25d6d793048f020&v=4",
+    "lastName" : "Schoonover",
     "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
   },
-  "-MVsZwV6ghnDrvieT9Ry" : {
-    "firstName" : "Nikaniki",
-    "imageUrl" : "http://dummyimage.com/300x.png/dddddd/000000",
-    "lastName" : "MacKniely",
+  "-MWo7rOl7thSfGn2X_c3" : {
+    "crewTitle" : "Pilot",
+    "firebaseKey" : "-MWo7rOl7thSfGn2X_c3",
+    "firstName" : "Ben",
+    "imageUrl" : "https://avatars.githubusercontent.com/u/76926244?v=4",
+    "lastName" : "Jarrett",
     "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
   },
-  "-MVsZwV9mcJxlg_3zKBT" : {
-    "firstName" : "Harriet",
-    "imageUrl" : "http://dummyimage.com/300x.png/dddddd/000000",
-    "lastName" : "Kinner",
+  "-MWo8e_47FfrkJdCgghR" : {
+    "crewTitle" : "Navigator",
+    "firebaseKey" : "-MWo8e_47FfrkJdCgghR",
+    "firstName" : "Dani",
+    "imageUrl" : "https://avatars.githubusercontent.com/u/68397076?v=4",
+    "lastName" : "Crosby",
     "uid" : "ZHTuFheUihTcR2d91LmeQ4s2cu03"
+  },
+  "-MWo99whRFozhNNZF19P" : {
+    "crewTitle" : "Captain",
+    "firebaseKey" : "-MWo99whRFozhNNZF19P",
+    "firstName" : "Trinity",
+    "imageUrl" : "https://avatars.githubusercontent.com/u/31781724?v=4",
+    "lastName" : "Christiana"
   }
 }

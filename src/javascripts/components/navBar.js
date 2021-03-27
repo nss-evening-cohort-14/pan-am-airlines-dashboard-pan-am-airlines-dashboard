@@ -24,8 +24,7 @@ const navBar = () => {
           </ul>
           <div id="logout-button"></div>
         </div>
-      </nav>
-     `;
+      </nav>`;
 };
 
 export default navBar;

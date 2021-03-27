@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import addPlaneForm from '../components/forms/addPlaneForm';
 import editPlaneForm from '../components/forms/editPlaneForm';
 import showPlanes from '../components/planes';
@@ -10,19 +11,18 @@ import {
 
 const planeDomEvents = () => {
   document.querySelector('body').addEventListener('click', (e) => {
-    // CLICK EVENT FOR SHOWING FORM FOR ADDING A PLANE
+    // ADD PLANE
     if (e.target.id.includes('add-plane-btn')) {
       addPlaneForm();
     }
-    // CLICK EVENT TO DELETE PLANE //
+    // DELETE PLANE
     if (e.target.id.includes('delete-plane')) {
-      // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete this plane from our fleet?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deletePlane(firebaseKey).then((planesArray) => showPlanes(planesArray));
       }
     }
-    // CLICK EVENT FOR TARGETING AND SUBMITING A PLANE //
+    // SUBMIT PLANE
     if (e.target.id.includes('submit-plane')) {
       e.preventDefault();
       const planeObject = {
@@ -34,12 +34,12 @@ const planeDomEvents = () => {
       createPlane(planeObject).then((planesArray) => showPlanes(planesArray));
       document.querySelector('#form-container').innerHTML = '';
     }
-    // CLICK EVENT FOR FORM TO EDIT A PLANE //
+    // EDIT PLANE
     if (e.target.id.includes('edit-plane-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       getSinglePlane(firebaseKey).then((planeObject) => editPlaneForm(planeObject));
     }
-    // CLICK EVENT TO UPDATE PLANE
+    // UPDATE PLANE
     if (e.target.id.includes('update-plane')) {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();

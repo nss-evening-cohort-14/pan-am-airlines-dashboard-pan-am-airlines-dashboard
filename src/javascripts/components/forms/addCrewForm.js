@@ -1,6 +1,7 @@
 const addCrewForm = () => {
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#main-container').innerHTML = '';
+
   document.querySelector('#form-container').innerHTML = `
     <div class="card bg-light mb-3" style="width: 40em;">
     <div class="card-header"></div>

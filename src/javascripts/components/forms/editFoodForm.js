@@ -23,8 +23,7 @@ const editFoodForm = (foodObject) => {
       <button type="submit" id="update-food-btn--${foodObject.firebaseKey}" class="btn btn-primary">Update Entree</button>
     </form>
   </div>
-</div>
-    `;
+</div>`;
 };
 
 export default editFoodForm;

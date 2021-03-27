@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { showCrews } from '../components/crew';
 import addCrewForm from '../components/forms/addCrewForm';
 import editCrewForm from '../components/forms/editCrewForm';
@@ -28,7 +29,6 @@ const crewDomEvents = () => {
     }
 
     if (e.target.id.includes('delete-crew-btn')) {
-      // eslint-disable-next-line no-alert
       if (window.confirm('Are you sure you want to FIRE this crew member?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteCrew(firebaseKey).then((crewsArray) => showCrews(crewsArray));

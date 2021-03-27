@@ -1,12 +1,13 @@
 const addFoodForm = () => {
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#main-container').innerHTML = '';
+
   document.querySelector('#form-container').innerHTML = `
  <div class="card bg-light mb-3" style="width: 40em;">
   <div class="card-header"></div>
   <div class="card-body">
-    <h5 class="card-title"><h3>FROM THE FLIGHT DECK</h3></h5>
-    <p class="card-text">Join our team of dedicated crew!</p>
+    <h5 class="card-title"><h3>FROM STEWARDESS CHAMBER</h3></h5>
+    <p class="card-text">Dinner is served!</p>
     <form id="add-plane-form" class="mb-4">
       <div class="form-group">
         <label for="title">Entree Item</label>
@@ -25,8 +26,7 @@ const addFoodForm = () => {
       <button type="submit" id="submit-food-btn" class="btn">Submit Entree</button>
     </form>
   </div>
-</div>
-    `;
+</div>`;
 };
 
 export default addFoodForm;

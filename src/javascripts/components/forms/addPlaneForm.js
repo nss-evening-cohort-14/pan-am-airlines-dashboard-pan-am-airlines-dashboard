@@ -2,6 +2,7 @@ const addPlaneForm = () => {
   document.querySelector('#modal').innerHTML = '';
   document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#main-container').innerHTML = '';
+
   document.querySelector('#form-container').innerHTML = `
  <div class="card bg-light mb-3" style="width: 40em;">
   <div class="card-header"></div>
@@ -30,8 +31,7 @@ const addPlaneForm = () => {
       <button type="submit" id="submit-plane" class="btn">Submit Plane</button>
     </form>
   </div>
-</div>
-    `;
+</div>`;
 };
 
 export default addPlaneForm;

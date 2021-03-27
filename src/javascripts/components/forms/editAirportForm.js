@@ -19,8 +19,7 @@ const editAirportForm = (airportObject) => {
       <button type="submit" id="update-airport-btn--${airportObject.firebaseKey}" class="btn btn-primary">Edit Airport</button>
     </form>
   </div>
-</div>
-    `;
+</div>`;
 };
 
 export default editAirportForm;

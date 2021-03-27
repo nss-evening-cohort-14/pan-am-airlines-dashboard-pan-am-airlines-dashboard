@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import showFood from '../components/food';
 import addFoodForm from '../components/forms/addFoodForm';
 import {
@@ -6,13 +7,13 @@ import {
 import editFoodForm from '../components/forms/editFoodForm';
 
 const foodDomEvents = () => {
-  // CLICK EVENT FOR SHOWING FORM FOR ADDING FOOD
+  // ADD FOOD
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('add-food-btn')) {
       document.querySelector('#form-container').innerHTML = '';
       addFoodForm();
     }
-    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING FOOD
+    // SUBMIT FOOD
     if (e.target.id.includes('submit-food-btn')) {
       e.preventDefault();
       const foodObject = {
@@ -24,13 +25,13 @@ const foodDomEvents = () => {
       createFood(foodObject).then((foodArray) => showFood(foodArray));
       document.querySelector('#form-container').innerHTML = '';
     }
-    // CLICK EVENT FOR SHOWING FORM FOR editing FOOD
+    // EDIT FOOD
     if (e.target.id.includes('edit-food-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       getSingleFood(firebaseKey).then((foodObject) => editFoodForm(foodObject));
     }
 
-    // CLICK EVENT FOR EDITING FOOD
+    // UPDATE FOOD
     if (e.target.id.includes('update-food-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
@@ -43,9 +44,8 @@ const foodDomEvents = () => {
       document.querySelector('#form-container').innerHTML = '';
     }
 
-    // CLICK EVENT FOR DELETING FOOD
+    // DELETE FOOD
     if (e.target.id.includes('delete-food-btn')) {
-      // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteFood(firebaseKey).then((foodArray) => showFood(foodArray));
