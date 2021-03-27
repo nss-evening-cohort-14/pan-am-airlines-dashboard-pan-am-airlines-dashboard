@@ -17,7 +17,7 @@ const addAirportForm = () => {
       <div class="form-group" id="select-airport">
       </div>
       <div class="form-group">
-        <class="form-group-label" for="description">Airport Locations</class=>
+        <class="form-group-label" for="description">Airport Location</class=>
         <input type="text" class="form-control" id="airportLocation" placeholder="Airport Description" required>
       </div>
       <button type="submit" id="submit-airport" class="btn">Submit Airport</button>

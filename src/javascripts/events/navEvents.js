@@ -38,6 +38,7 @@ const navEvents = () => {
   document.querySelector('#home-screen').addEventListener('click', () => {
     home();
     document.querySelector('#form-container').innerHTML = '';
+    document.querySelector('#add-button').innerHTML = '';
   });
 };
 

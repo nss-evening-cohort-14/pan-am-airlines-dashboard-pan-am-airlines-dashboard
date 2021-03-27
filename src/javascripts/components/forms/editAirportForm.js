@@ -13,7 +13,7 @@ const editAirportForm = (airportObject) => {
         <input type="url" class="form-control" id="airportImage" placeholder="Image URL" required value="${airportObject.airportImage}">
       </div>
       <div class="form-group">
-        <class="form-group-label" for="description">Airport Locations</class=>
+        <class="form-group-label" for="description">Airport Locations</class>
         <input type="text" class="form-control" id="airportLocation" placeholder="Airport Description" required value="${airportObject.airportLocation}">
       </div>
       <button type="submit" id="update-airport-btn--${airportObject.firebaseKey}" class="btn btn-primary">Edit Airport</button>

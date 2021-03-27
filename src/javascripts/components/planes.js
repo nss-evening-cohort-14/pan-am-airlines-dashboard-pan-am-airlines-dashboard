@@ -4,7 +4,7 @@ const showPlanes = (arr) => {
   document.querySelector('#main-container').innerHTML = '';
 
   arr.forEach((item) => {
-    document.querySelector('#main-container').innerHTML += `<div class="card">
+    document.querySelector('#main-container').innerHTML += `<div class="card" style="background-color: rgb(247, 233, 232)">
     <img class="card-img-top" src=${item.planeImage} alt=${item.planeMake}">
     <div class="card-body">
     <h5 class="card-title">${item.planeMake}</h5>
