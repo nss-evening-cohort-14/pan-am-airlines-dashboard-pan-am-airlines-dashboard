@@ -1,18 +1,18 @@
 const showPlanes = (arr) => {
   document.querySelector('#boards').innerHTML = '';
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-plane-btn">Add A Plane</button>';
+  document.querySelector('#add-button').innerHTML = '<button class="btn" id="add-plane-btn">Add A Plane</button>';
   document.querySelector('#main-container').innerHTML = '';
 
   arr.forEach((item) => {
-    document.querySelector('#main-container').innerHTML += `<div class="card">
+    document.querySelector('#main-container').innerHTML += `<div class="card" style="background-color: rgb(247, 233, 232)">
     <img class="card-img-top" src=${item.planeImage} alt=${item.planeMake}">
     <div class="card-body">
     <h5 class="card-title">${item.planeMake}</h5>
-    <p class="card-text bold">${item.s ? `<span class="badge badge-info sale-badge"><i class="fa fa-bell" aria-hidden="true"></i> Plane Model</span> Plane Model ${item.planeModel}` : `Plane Model ${item.planeModel}`}</p>
+    <p class="card-desc">${item.planeModel}</p>
     <hr>
-    <h6 class="plane-capacity"> Capacity ${item.planeCapacity}</h6>
-    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-plane-btn--${item.firebaseKey}">Edit Plane</button>
-    <button class="btn btn-danger" id="delete-plane--${item.firebaseKey}">Delete Plane</button>
+    <h6 class="plane-capacity"> Capacity: ${item.planeCapacity}</h6>
+    <button class="btn" data-toggle="modal" data-target="#formModal" id="edit-plane-btn--${item.firebaseKey}">Edit Plane</button>
+    <button class="btn" id="delete-plane--${item.firebaseKey}">Delete Plane</button>
     </div>
   </div>`;
   });

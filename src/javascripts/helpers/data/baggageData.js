@@ -1,24 +1,20 @@
-/* eslint-disable object-curly-newline */
 import axios from 'axios';
 import firebaseConfig from './auth/apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
-// GET BAGGAGE CARDS
 const getBaggage = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/baggages.json`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
 
-// GET SINGLE BAG
 const getSingleBag = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/baggages/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
-// CREATE BAGGAGE
 const createBaggage = (baggageObject) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/baggages.json`, baggageObject)
     .then((response) => {
@@ -36,4 +32,16 @@ const deleteBaggage = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getBaggage, getSingleBag, createBaggage, deleteBaggage };
+const updateBaggage = (firebaseKey, baggageObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/baggages/${firebaseKey}.json`, baggageObject)
+    .then(() => getBaggage()).then((baggagesArray) => resolve(baggagesArray))
+    .catch((error) => reject(error));
+});
+
+export {
+  getBaggage,
+  getSingleBag,
+  createBaggage,
+  deleteBaggage,
+  updateBaggage
+};

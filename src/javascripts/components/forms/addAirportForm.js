@@ -5,12 +5,10 @@ const addAirportForm = () => {
  <div class="card bg-light mb-3" style="width: 40em;">
   <div class="card-header"></div>
   <div class="card-body">
-    <h5 class="card-title"><h3>FROM THE FLIGHT DECK</h3></h5>
-    <p class="card-text">Join our team of dedicated crew!</p>
-    <form id="submit-airport-form" class="mb-4">
+    <form id="submit-air-form" class="mb-4">
       <div class="form-group">
         <label for="title">Airport Name</label>
-        <input type="text" class="form-control" id="airportName" aria-describedby="Airportitle" placeholder="Enter Airport Title" required>
+        <input type="text" class="form-control" id="airportName" aria-describedby="Airportitle" placeholder="Airport Title" required>
       </div>
       <div class="form-group">
         <label for="image-airport">Image URL</label>
@@ -19,10 +17,10 @@ const addAirportForm = () => {
       <div class="form-group" id="select-airport">
       </div>
       <div class="form-group">
-        <class="form-group-label" for="description">Airport Locations</class=>
+        <class="form-group-label" for="description">Airport Location</class=>
         <input type="text" class="form-control" id="airportLocation" placeholder="Airport Description" required>
       </div>
-      <button type="submit" id="submit-airport" class="btn btn-primary">Submit Airport</button>
+      <button type="submit" id="submit-airport" class="btn">Submit Airport</button>
     </form>
   </div>
 </div>

@@ -3,8 +3,10 @@
 
 
 body {
-  background-color: rgb(66, 176, 250);
-  color: BLUE;
+  background-image: url('https://cdn3.vectorstock.com/i/1000x1000/07/62/cloudy-background-on-blue-sky-vector-9790762.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
   text-align: center;
   margin-top: 100px;
 }
@@ -18,4 +20,15 @@ body {
   text-align: center;
   margin: auto;
   justify-content: center;
+}
+.btn {
+  background-color: white;
+  color: black
+}
+.btn:hover {
+  background-color: black; 
+  color: white;
+}
+#navBarColor {
+  background-color: rgb(247, 233, 232);
 }
